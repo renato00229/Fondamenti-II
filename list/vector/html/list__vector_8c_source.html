@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Liste di Vettori: list_vector.h File Reference</title>
+<title>Liste di Vettori: list_vector.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -107,70 +107,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">list_vector.h File Reference</div>  </div>
+<div class="title">list_vector.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-</div>
-<p><a href="list__vector_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a3e8b1bd855f5efcb6aa1f67fddcb69ad"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3e8b1bd855f5efcb6aa1f67fddcb69ad"></a>
-typedef int&#160;</td><td class="memItemRight" valign="bottom"><b>ElemType</b></td></tr>
-<tr class="separator:a3e8b1bd855f5efcb6aa1f67fddcb69ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a7268d566f05ce324f6bceea069d9793a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__vector_8h.html#a7268d566f05ce324f6bceea069d9793a">ElemCompare</a> (const ElemType *e1, const ElemType *e2)</td></tr>
-<tr class="memdesc:a7268d566f05ce324f6bceea069d9793a"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ElemCompare confronta due elementi.  <a href="#a7268d566f05ce324f6bceea069d9793a">More...</a><br /></td></tr>
-<tr class="separator:a7268d566f05ce324f6bceea069d9793a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Dichiarazione del tipo ElemType e delle funzioni associate che dipendono dal tipo scelto: ElemCompare, ElemCopy, ElemDelete, GetElem, GetStdinElem, PrintElem, PrintStdoutElem.</p>
-<p>Dichiarazione del tipo Item e delle primitive delle liste: </p>
-
-<p>Definition in file <a class="el" href="list__vector_8h_source.html">list_vector.h</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a7268d566f05ce324f6bceea069d9793a"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ElemCompare </td>
-          <td>(</td>
-          <td class="paramtype">const ElemType *&#160;</td>
-          <td class="paramname"><em>e1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const ElemType *&#160;</td>
-          <td class="paramname"><em>e2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>La funzione ElemCompare confronta due elementi. </p>
-<dl class="section return"><dt>Returns</dt><dd>La funzione ritorna un valore intero che indica la relazione tra i due elementi, ovvero: -1 se il contenuto del primo è minore di quello del secondo; 0 se i contenuti dei due elementi sono uguali 1 se il contenuto del primo è maggiore di quello del secondo; </dd></dl>
-
-<p>Definition at line <a class="el" href="list__vector_8h_source.html#l00030">30</a> of file <a class="el" href="list__vector_8h_source.html">list_vector.h</a>.</p>
-
-</div>
-</div>
-</div><!-- contents -->
+<a href="list__vector_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef LIST_INT_H_</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define LIST_INT_H_</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/*****************************************************************************/</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/*                                 Element                                   */</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">/*****************************************************************************/</span>    </div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">int</span> ElemType;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="list__vector_8c.html#a7268d566f05ce324f6bceea069d9793a">   30</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="list__vector_8c.html#a7268d566f05ce324f6bceea069d9793a">ElemCompare</a>(<span class="keyword">const</span> ElemType *e1, <span class="keyword">const</span> ElemType *e2)</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> (e1 &gt; e2) - (e1 &lt; e2);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif // LIST_INT_H_</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="ttc" id="list__vector_8c_html_a7268d566f05ce324f6bceea069d9793a"><div class="ttname"><a href="list__vector_8c.html#a7268d566f05ce324f6bceea069d9793a">ElemCompare</a></div><div class="ttdeci">int ElemCompare(const ElemType *e1, const ElemType *e2)</div><div class="ttdoc">La funzione ElemCompare confronta due elementi. </div><div class="ttdef"><b>Definition:</b> <a href="list__vector_8c_source.html#l00030">list_vector.c:30</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
