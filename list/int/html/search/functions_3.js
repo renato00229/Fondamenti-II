@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['getheadlist',['GetHeadList',['../list__int_8h.html#a9dec18fa3c872f84875eef8f6322d1b8',1,'list_int.h']]],
-  ['gettaillist',['GetTailList',['../list__int_8h.html#ada31a7fedfb0d9c6fbb137c214058bd4',1,'list_int.c']]]
+  ['getheadlist',['GetHeadList',['../list__int_8h.html#a9d0127e28fc841ea13d88a12ea4a0fc2',1,'list_int.c']]],
+  ['gettaillist',['GetTailList',['../list__int_8h.html#a67e3582ac612085873c35abeaecd15c1',1,'list_int.c']]]
 ];
