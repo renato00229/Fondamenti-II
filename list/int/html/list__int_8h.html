@@ -149,9 +149,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a9c2364149fe120a2185161107e1b91c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int_8h.html#a9c2364149fe120a2185161107e1b91c6">IsEmptyList</a> (const <a class="el" href="struct_item.html">Item</a> *i)</td></tr>
 <tr class="memdesc:a9c2364149fe120a2185161107e1b91c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione IsEmptyList verifica se una lista data è vuota o meno.  <a href="#a9c2364149fe120a2185161107e1b91c6">More...</a><br /></td></tr>
 <tr class="separator:a9c2364149fe120a2185161107e1b91c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7d9bdad51d4d8372cf5be7a4ff3e66b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="list__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int_8h.html#aa7d9bdad51d4d8372cf5be7a4ff3e66b">GetHeadValueList</a> (<a class="el" href="struct_item.html">Item</a> *i)</td></tr>
-<tr class="memdesc:aa7d9bdad51d4d8372cf5be7a4ff3e66b"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione GetHeadList ritorna un puntatore all'elemento in testa ad una lista data senza rimuoverlo dalla lista.  <a href="#aa7d9bdad51d4d8372cf5be7a4ff3e66b">More...</a><br /></td></tr>
-<tr class="separator:aa7d9bdad51d4d8372cf5be7a4ff3e66b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d804476ad8274b7967ee51f043d5824"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="list__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int_8h.html#a0d804476ad8274b7967ee51f043d5824">GetHeadValueList</a> (const <a class="el" href="struct_item.html">Item</a> *i)</td></tr>
+<tr class="memdesc:a0d804476ad8274b7967ee51f043d5824"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione GetHeadList ritorna un puntatore all'elemento in testa ad una lista data senza rimuoverlo dalla lista.  <a href="#a0d804476ad8274b7967ee51f043d5824">More...</a><br /></td></tr>
+<tr class="separator:a0d804476ad8274b7967ee51f043d5824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67e3582ac612085873c35abeaecd15c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_item.html">Item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int_8h.html#a67e3582ac612085873c35abeaecd15c1">GetTailList</a> (const <a class="el" href="struct_item.html">Item</a> *i)</td></tr>
 <tr class="memdesc:a67e3582ac612085873c35abeaecd15c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione GetTailList ritorna la lista privata dell'elemento in testa. La funzione NON dealloca la memoria occupata dall'elemento.  <a href="#a67e3582ac612085873c35abeaecd15c1">More...</a><br /></td></tr>
 <tr class="separator:a67e3582ac612085873c35abeaecd15c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -183,7 +183,7 @@ Functions</h2></td></tr>
 <li><a class="el" href="list__int_8h.html#a967d8afe585e8439bccfe995ae33e863" title="La funzione CreateEmptyList crea e ritorna una lista vuota, ovvero NULL pointer. ">CreateEmptyList()</a></li>
 <li><a class="el" href="list__int_8h.html#abc38cb5bfc461cddcecabbe2b207332b" title="La funzione InsertHeadList aggiunge un nuovo elemento in testa ad una lista data e ritorna il puntato...">InsertHeadList()</a></li>
 <li><a class="el" href="list__int_8h.html#a9c2364149fe120a2185161107e1b91c6" title="La funzione IsEmptyList verifica se una lista data è vuota o meno. ">IsEmptyList()</a></li>
-<li><a class="el" href="list__int_8h.html#aa7d9bdad51d4d8372cf5be7a4ff3e66b" title="La funzione GetHeadList ritorna un puntatore all&#39;elemento in testa ad una lista data senza rimuoverlo...">GetHeadValueList()</a></li>
+<li><a class="el" href="list__int_8h.html#a0d804476ad8274b7967ee51f043d5824" title="La funzione GetHeadList ritorna un puntatore all&#39;elemento in testa ad una lista data senza rimuoverlo...">GetHeadValueList()</a></li>
 <li><a class="el" href="list__int_8h.html#a67e3582ac612085873c35abeaecd15c1" title="La funzione GetTailList ritorna la lista privata dell&#39;elemento in testa. La funzione NON dealloca la ...">GetTailList()</a></li>
 <li><a class="el" href="list__int_8h.html#a7a93f9f1cc222bd0662aeebeaa3cc96e" title="La funzione InsertBackList aggiunge un elemento in coda ad una lista (anche vuota) e ritorna la lista...">InsertBackList()</a></li>
 <li><a class="el" href="list__int_8h.html#a35d3b7e5e95fb469360f8847ddf9864a" title="La funzione DeleteList libera la memoria occupata dagli elementi di una lista. ">DeleteList()</a></li>
@@ -349,16 +349,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa7d9bdad51d4d8372cf5be7a4ff3e66b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7d9bdad51d4d8372cf5be7a4ff3e66b">&#9670;&nbsp;</a></span>GetHeadValueList()</h2>
+<a id="a0d804476ad8274b7967ee51f043d5824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d804476ad8274b7967ee51f043d5824">&#9670;&nbsp;</a></span>GetHeadValueList()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="list__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a>* GetHeadValueList </td>
+          <td class="memname">const <a class="el" href="list__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a>* GetHeadValueList </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_item.html">Item</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_item.html">Item</a> *&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
@@ -372,7 +372,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Puntatore all'elemento in testa alla lista. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Puntatore costante all'elemento in testa alla lista. </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="list__int_8c_source.html#l00068">68</a> of file <a class="el" href="list__int_8c_source.html">list_int.c</a>.</p>
 
