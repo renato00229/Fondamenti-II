@@ -147,7 +147,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:abc38cb5bfc461cddcecabbe2b207332b"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione InsertHeadList aggiunge un nuovo elemento in testa ad una lista data e ritorna il puntatore alla nuova testa della lista.  <a href="#abc38cb5bfc461cddcecabbe2b207332b">More...</a><br /></td></tr>
 <tr class="separator:abc38cb5bfc461cddcecabbe2b207332b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c2364149fe120a2185161107e1b91c6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int_8h.html#a9c2364149fe120a2185161107e1b91c6">IsEmptyList</a> (const <a class="el" href="struct_item.html">Item</a> *i)</td></tr>
-<tr class="memdesc:a9c2364149fe120a2185161107e1b91c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione IsEmptyList verifica se una lista data è vuota o meno.  <a href="#a9c2364149fe120a2185161107e1b91c6">More...</a><br /></td></tr>
+<tr class="memdesc:a9c2364149fe120a2185161107e1b91c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione IsEmptyList verifica se una lista data e' vuota o meno.  <a href="#a9c2364149fe120a2185161107e1b91c6">More...</a><br /></td></tr>
 <tr class="separator:a9c2364149fe120a2185161107e1b91c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d804476ad8274b7967ee51f043d5824"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="list__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int_8h.html#a0d804476ad8274b7967ee51f043d5824">GetHeadValueList</a> (const <a class="el" href="struct_item.html">Item</a> *i)</td></tr>
 <tr class="memdesc:a0d804476ad8274b7967ee51f043d5824"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione GetHeadList ritorna un puntatore all'elemento in testa ad una lista data senza rimuoverlo dalla lista.  <a href="#a0d804476ad8274b7967ee51f043d5824">More...</a><br /></td></tr>
@@ -182,7 +182,7 @@ Functions</h2></td></tr>
 <p>Definizione del tipo <a class="el" href="struct_item.html" title="Definizione del tipo Item. ">Item</a> e delle funzioni primitive (e non) delle liste:</p><ul>
 <li><a class="el" href="list__int_8h.html#a967d8afe585e8439bccfe995ae33e863" title="La funzione CreateEmptyList crea e ritorna una lista vuota, ovvero NULL pointer. ">CreateEmptyList()</a></li>
 <li><a class="el" href="list__int_8h.html#abc38cb5bfc461cddcecabbe2b207332b" title="La funzione InsertHeadList aggiunge un nuovo elemento in testa ad una lista data e ritorna il puntato...">InsertHeadList()</a></li>
-<li><a class="el" href="list__int_8h.html#a9c2364149fe120a2185161107e1b91c6" title="La funzione IsEmptyList verifica se una lista data è vuota o meno. ">IsEmptyList()</a></li>
+<li><a class="el" href="list__int_8h.html#a9c2364149fe120a2185161107e1b91c6" title="La funzione IsEmptyList verifica se una lista data e&#39; vuota o meno. ">IsEmptyList()</a></li>
 <li><a class="el" href="list__int_8h.html#a0d804476ad8274b7967ee51f043d5824" title="La funzione GetHeadList ritorna un puntatore all&#39;elemento in testa ad una lista data senza rimuoverlo...">GetHeadValueList()</a></li>
 <li><a class="el" href="list__int_8h.html#a67e3582ac612085873c35abeaecd15c1" title="La funzione GetTailList ritorna la lista privata dell&#39;elemento in testa. La funzione NON dealloca la ...">GetTailList()</a></li>
 <li><a class="el" href="list__int_8h.html#a7a93f9f1cc222bd0662aeebeaa3cc96e" title="La funzione InsertBackList aggiunge un elemento in coda ad una lista (anche vuota) e ritorna la lista...">InsertBackList()</a></li>
@@ -281,9 +281,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>La funzione ritorna un valore intero che indica la relazione tra i due elementi, ovvero:<ul>
-<li>-1 se il contenuto del primo è minore di quello del secondo;</li>
+<li>-1 se il contenuto del primo e' minore di quello del secondo;</li>
 <li>0 se i contenuti dei due elementi sono uguali</li>
-<li>1 se il contenuto del primo è maggiore di quello del secondo; </li>
+<li>1 se il contenuto del primo e' maggiore di quello del secondo; </li>
 </ul>
 </dd></dl>
 
@@ -368,7 +368,7 @@ Functions</h2></td></tr>
 <p>La funzione GetHeadList ritorna un puntatore all'elemento in testa ad una lista data senza rimuoverlo dalla lista. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista. La lista non può essere vuota, nel caso in cui lo sia la funzione termina il programma con codice di errore 1.</td></tr>
+    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista. La lista non puo' essere vuota, nel caso in cui lo sia la funzione termina il programma con codice di errore 1.</td></tr>
   </table>
   </dd>
 </dl>
@@ -397,7 +397,7 @@ Functions</h2></td></tr>
 <p>La funzione GetTailList ritorna la lista privata dell'elemento in testa. La funzione NON dealloca la memoria occupata dall'elemento. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da cui eliminare la testa. La lista non può essere vuota, nel caso in cui lo sia la funzione termina il programma con codice di errore 2.</td></tr>
+    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da cui eliminare la testa. La lista non puo' essere vuota, nel caso in cui lo sia la funzione termina il programma con codice di errore 2.</td></tr>
   </table>
   </dd>
 </dl>
@@ -503,7 +503,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione IsEmptyList verifica se una lista data è vuota o meno. </p>
+<p>La funzione IsEmptyList verifica se una lista data e' vuota o meno. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da verificare.</td></tr>
@@ -636,7 +636,7 @@ Functions</h2></td></tr>
 <p>La funzione WriteList stampa la lista specificata su file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da stampare su file. La lista non viene modificata. La lista può essere vuota. </td></tr>
+    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da stampare su file. La lista non viene modificata. La lista puo' essere vuota. </td></tr>
     <tr><td class="paramname">f</td><td>FILE * su cui stampare la lista.</td></tr>
   </table>
   </dd>
@@ -695,7 +695,7 @@ Functions</h2></td></tr>
 <p>La funzione WriteStdoutList stampa la lista specificata su standard output. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da stampare su standard output. La lista non viene modificata. La lista può essere vuota.</td></tr>
+    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da stampare su standard output. La lista non viene modificata. La lista puo' essere vuota.</td></tr>
   </table>
   </dd>
 </dl>
