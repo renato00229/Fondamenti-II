@@ -18,10 +18,10 @@ var indexSectionNames =
 
 var indexSectionLabels =
 {
-  0: "Tutto",
-  1: "Classi",
-  2: "File",
-  3: "Funzioni",
-  4: "Ridefinizioni di tipo (typedef)"
+  0: "All",
+  1: "Classes",
+  2: "Files",
+  3: "Functions",
+  4: "Typedefs"
 };
 
