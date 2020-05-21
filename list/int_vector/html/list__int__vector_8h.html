@@ -130,12 +130,12 @@ Functions</h2></td></tr>
 <tr class="memitem:a07a02ea8bccc1a067b0d457286daa6fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int__vector_8h.html#a07a02ea8bccc1a067b0d457286daa6fa">ElemDelete</a> (<a class="el" href="struct_elem_type.html">ElemType</a> *e)</td></tr>
 <tr class="memdesc:a07a02ea8bccc1a067b0d457286daa6fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ElemDelete libera la memoria occupata dall'elemento specificato.  <a href="#a07a02ea8bccc1a067b0d457286daa6fa">More...</a><br /></td></tr>
 <tr class="separator:a07a02ea8bccc1a067b0d457286daa6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b28a97b722e617e1632c21715d91312"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_elem_type.html">ElemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int__vector_8h.html#a7b28a97b722e617e1632c21715d91312">ReadElem</a> (FILE *f)</td></tr>
-<tr class="memdesc:a7b28a97b722e617e1632c21715d91312"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ReadElem legge un elemento da file.  <a href="#a7b28a97b722e617e1632c21715d91312">More...</a><br /></td></tr>
-<tr class="separator:a7b28a97b722e617e1632c21715d91312"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0940d19772d0b615ba9583a5738246af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_elem_type.html">ElemType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int__vector_8h.html#a0940d19772d0b615ba9583a5738246af">ReadStdinElem</a> ()</td></tr>
-<tr class="memdesc:a0940d19772d0b615ba9583a5738246af"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ReadStdinElem legge un elemento da standard input.  <a href="#a0940d19772d0b615ba9583a5738246af">More...</a><br /></td></tr>
-<tr class="separator:a0940d19772d0b615ba9583a5738246af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25e577b149e6048606bd85544fcb6f9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int__vector_8h.html#a25e577b149e6048606bd85544fcb6f9e">ReadElem</a> (FILE *f, <a class="el" href="struct_elem_type.html">ElemType</a> *e)</td></tr>
+<tr class="memdesc:a25e577b149e6048606bd85544fcb6f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ReadElem legge un elemento da file, ovvero legge la sua 'size' (size_t), alloca spazio per 'size' interi e legge quindi size interi salvandoli nel vettore puntato da 'data'. Se la lettura di anche solo uno dei valori fallisce la funzione ritorna 0, altrimenti ritorna 1.  <a href="#a25e577b149e6048606bd85544fcb6f9e">More...</a><br /></td></tr>
+<tr class="separator:a25e577b149e6048606bd85544fcb6f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93678d55a9f410e29b38c7bde786a718"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int__vector_8h.html#a93678d55a9f410e29b38c7bde786a718">ReadStdinElem</a> (<a class="el" href="struct_elem_type.html">ElemType</a> *e)</td></tr>
+<tr class="memdesc:a93678d55a9f410e29b38c7bde786a718"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ReadStdinElem legge un elemento da standard input, ovvero legge la sua 'size' (size_t), alloca spazio per 'size' interi e legge quindi size interi salvandoli nel vettore puntato da 'data'. Se la lettura di anche solo uno dei valori fallisce la funzione ritorna 0, altrimenti ritorna 1.  <a href="#a93678d55a9f410e29b38c7bde786a718">More...</a><br /></td></tr>
+<tr class="separator:a93678d55a9f410e29b38c7bde786a718"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61568db0888c2a7b1a471cf029510702"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list__int__vector_8h.html#a61568db0888c2a7b1a471cf029510702">WriteElem</a> (const <a class="el" href="struct_elem_type.html">ElemType</a> *e, FILE *f)</td></tr>
 <tr class="memdesc:a61568db0888c2a7b1a471cf029510702"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione WriteElem stampa un elemento su file.  <a href="#a61568db0888c2a7b1a471cf029510702">More...</a><br /></td></tr>
 <tr class="separator:a61568db0888c2a7b1a471cf029510702"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,8 +175,8 @@ Functions</h2></td></tr>
 <li><a class="el" href="list__int__vector_8h.html#a7268d566f05ce324f6bceea069d9793a" title="La funzione ElemCompare confronta due elementi. ">ElemCompare()</a></li>
 <li><a class="el" href="list__int__vector_8h.html#ae7bedbb439aa379a44372e19f76e66ad" title="La funzione ElemCopy crea e ritorna una copia dell&#39;elemento dato. ">ElemCopy()</a></li>
 <li><a class="el" href="list__int__vector_8h.html#a07a02ea8bccc1a067b0d457286daa6fa" title="La funzione ElemDelete libera la memoria occupata dall&#39;elemento specificato. ">ElemDelete()</a></li>
-<li><a class="el" href="list__int__vector_8h.html#a7b28a97b722e617e1632c21715d91312" title="La funzione ReadElem legge un elemento da file. ">ReadElem()</a></li>
-<li><a class="el" href="list__int__vector_8h.html#a0940d19772d0b615ba9583a5738246af" title="La funzione ReadStdinElem legge un elemento da standard input. ">ReadStdinElem()</a></li>
+<li><a class="el" href="list__int__vector_8h.html#a25e577b149e6048606bd85544fcb6f9e" title="La funzione ReadElem legge un elemento da file, ovvero legge la sua &#39;size&#39; (size_t), alloca spazio per &#39;size&#39; interi e legge quindi size interi salvandoli nel vettore puntato da &#39;data&#39;. Se la lettura di anche solo uno dei valori fallisce la funzione ritorna 0, altrimenti ritorna 1. ">ReadElem()</a></li>
+<li><a class="el" href="list__int__vector_8h.html#a93678d55a9f410e29b38c7bde786a718" title="La funzione ReadStdinElem legge un elemento da standard input, ovvero legge la sua &#39;size&#39; (size_t)...">ReadStdinElem()</a></li>
 <li><a class="el" href="list__int__vector_8h.html#a61568db0888c2a7b1a471cf029510702" title="La funzione WriteElem stampa un elemento su file. ">WriteElem()</a></li>
 <li><a class="el" href="list__int__vector_8h.html#afb4f67576fa555e9f81d0abca4fb3c2c" title="La funzione PrintStdoutElem stampa un elemento su standard output. ">WriteStdoutElem()</a></li>
 </ul>
@@ -215,7 +215,7 @@ Functions</h2></td></tr>
 <p>La funzione CreateEmptyList crea e ritorna una lista vuota, ovvero NULL pointer. </p>
 <dl class="section return"><dt>Returns</dt><dd>Lista vuota appena creata (NULL pointer). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00074">74</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00077">77</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
@@ -244,7 +244,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00132">132</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00135">135</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
@@ -403,7 +403,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Puntatore all'item in testa alla lista ottenuta dopo l'eliminazione. Il valore di ritorno potrebbe essere una lista vuota (NULL pointer). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00103">103</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00106">106</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
@@ -443,7 +443,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Puntatore all'item in testa alla lista ottenuta dopo l'aggiunta dell'elemento. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00114">114</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00117">117</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
@@ -483,7 +483,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Puntatore all'item in testa alla lista ottenuta dopo l'aggiunta. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00079">79</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00082">82</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
@@ -512,58 +512,76 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true se la lista e' vuota, false altrimenti. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00087">87</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00090">90</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
-<a id="a7b28a97b722e617e1632c21715d91312"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b28a97b722e617e1632c21715d91312">&#9670;&nbsp;</a></span>ReadElem()</h2>
+<a id="a25e577b149e6048606bd85544fcb6f9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25e577b149e6048606bd85544fcb6f9e">&#9670;&nbsp;</a></span>ReadElem()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_elem_type.html">ElemType</a> ReadElem </td>
+          <td class="memname">int ReadElem </td>
           <td>(</td>
           <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>f</em></td><td>)</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="struct_elem_type.html">ElemType</a> *&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione ReadElem legge un elemento da file. </p>
+<p>La funzione ReadElem legge un elemento da file, ovvero legge la sua 'size' (size_t), alloca spazio per 'size' interi e legge quindi size interi salvandoli nel vettore puntato da 'data'. Se la lettura di anche solo uno dei valori fallisce la funzione ritorna 0, altrimenti ritorna 1. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>FILE * da cui leggere un elemento.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>FILE * da cui leggere un elemento. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">e</td><td>Elemento letto da file.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Elemento letto da file. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Numero di elementi effettivamente letti (0 o 1). </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00036">36</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
-<a id="a0940d19772d0b615ba9583a5738246af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0940d19772d0b615ba9583a5738246af">&#9670;&nbsp;</a></span>ReadStdinElem()</h2>
+<a id="a93678d55a9f410e29b38c7bde786a718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93678d55a9f410e29b38c7bde786a718">&#9670;&nbsp;</a></span>ReadStdinElem()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_elem_type.html">ElemType</a> ReadStdinElem </td>
+          <td class="memname">int ReadStdinElem </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_elem_type.html">ElemType</a> *&#160;</td>
+          <td class="paramname"><em>e</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione ReadStdinElem legge un elemento da standard input. </p>
-<dl class="section return"><dt>Returns</dt><dd>Elemento letto da standard input. </dd></dl>
+<p>La funzione ReadStdinElem legge un elemento da standard input, ovvero legge la sua 'size' (size_t), alloca spazio per 'size' interi e legge quindi size interi salvandoli nel vettore puntato da 'data'. Se la lettura di anche solo uno dei valori fallisce la funzione ritorna 0, altrimenti ritorna 1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">e</td><td>Elemento letto da standard input.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Numero di elementi effettivamente letti (0 o 1). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00048">48</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00051">51</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
@@ -603,7 +621,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00053">53</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00056">56</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
@@ -643,7 +661,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00146">146</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00149">149</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
@@ -672,7 +690,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00065">65</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00068">68</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
@@ -701,7 +719,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00157">157</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="list__int__vector_8c_source.html#l00160">160</a> of file <a class="el" href="list__int__vector_8c_source.html">list_int_vector.c</a>.</p>
 
 </div>
 </div>
