@@ -238,7 +238,7 @@ Functions</h2></td></tr>
 <p>La funzione DeleteList libera la memoria occupata dagli elementi di una lista. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista di cui liberare la memoria. Puo' essere una lista vuota (NULL pointer).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Puntatore all'item in testa alla lista di cui liberare la memoria. Puo' essere una lista vuota (NULL pointer).</td></tr>
   </table>
   </dd>
 </dl>
@@ -370,7 +370,7 @@ Functions</h2></td></tr>
 <p>La funzione GetHeadList ritorna un puntatore all'elemento in testa ad una lista data senza rimuoverlo dalla lista. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista. La lista non puo' essere vuota, nel caso in cui lo sia la funzione termina il programma con codice di errore 1.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Puntatore all'item in testa alla lista. La lista non puo' essere vuota, nel caso in cui lo sia la funzione termina il programma con codice di errore 1.</td></tr>
   </table>
   </dd>
 </dl>
@@ -397,7 +397,7 @@ Functions</h2></td></tr>
 <p>La funzione GetTailList ritorna la lista privata dell'elemento in testa. La funzione NON dealloca la memoria occupata dall'elemento. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da cui eliminare la testa. La lista non puo' essere vuota, nel caso in cui lo sia la funzione termina il programma con codice di errore 2.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da cui eliminare la testa. La lista non puo' essere vuota, nel caso in cui lo sia la funzione termina il programma con codice di errore 2.</td></tr>
   </table>
   </dd>
 </dl>
@@ -436,8 +436,8 @@ Functions</h2></td></tr>
 <p>La funzione InsertBackList aggiunge un elemento in coda ad una lista (anche vuota) e ritorna la lista risultante. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista a cui aggiungere l'elemento specifciato. La lista puo' essere vuota (NULL pointer). </td></tr>
-    <tr><td class="paramname">e</td><td>Puntatore all'elemento da aggiugnere in testa alla lista. Il valore contenuto in e non viene modificato.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Puntatore all'item in testa alla lista a cui aggiungere l'elemento specifciato. La lista puo' essere vuota (NULL pointer). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>Puntatore all'elemento da aggiugnere in testa alla lista. Il valore contenuto in e non viene modificato.</td></tr>
   </table>
   </dd>
 </dl>
@@ -476,8 +476,8 @@ Functions</h2></td></tr>
 <p>La funzione InsertHeadList aggiunge un nuovo elemento in testa ad una lista data e ritorna il puntatore alla nuova testa della lista. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">e</td><td>Puntatore all'elemento da aggiugnere in testa alla lista. </td></tr>
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista a cui aggiungere il nuovo elemento. Il valore contenuto in i non viene modificato. i puo' puntare ad una lista vuota (NULL pointer).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>Puntatore all'elemento da aggiugnere in testa alla lista. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Puntatore all'item in testa alla lista a cui aggiungere il nuovo elemento. Il valore contenuto in i non viene modificato. i puo' puntare ad una lista vuota (NULL pointer).</td></tr>
   </table>
   </dd>
 </dl>
@@ -506,7 +506,7 @@ Functions</h2></td></tr>
 <p>La funzione IsEmptyList verifica se una lista data e' vuota o meno. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da verificare.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da verificare.</td></tr>
   </table>
   </dd>
 </dl>
@@ -654,8 +654,8 @@ Functions</h2></td></tr>
 <p>La funzione WriteList stampa la lista specificata su file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da stampare su file. La lista non viene modificata. La lista puo' essere vuota. </td></tr>
-    <tr><td class="paramname">f</td><td>FILE * su cui stampare la lista.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da stampare su file. La lista non viene modificata. La lista puo' essere vuota. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>FILE * su cui stampare la lista.</td></tr>
   </table>
   </dd>
 </dl>
@@ -713,7 +713,7 @@ Functions</h2></td></tr>
 <p>La funzione WriteStdoutList stampa la lista specificata su standard output. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da stampare su standard output. La lista non viene modificata. La lista puo' essere vuota.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Puntatore all'item in testa alla lista da stampare su standard output. La lista non viene modificata. La lista puo' essere vuota.</td></tr>
   </table>
   </dd>
 </dl>
