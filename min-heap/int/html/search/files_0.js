@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['heap_5fint_2eh',['heap_int.h',['../heap__int_8h.html',1,'']]]
+  ['minheap_5fint_2eh',['minheap_int.h',['../minheap__int_8h.html',1,'']]]
 ];

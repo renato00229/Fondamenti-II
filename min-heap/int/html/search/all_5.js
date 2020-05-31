@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['isemptytree',['IsEmptyTree',['../heap__int_8h.html#a735a77cd0dc7ce5f13408a602772c13b',1,'heap_int.c']]],
-  ['isleaftree',['IsLeafTree',['../heap__int_8h.html#ab065de59ba7fec41abf4a6f98204fc40',1,'heap_int.c']]]
+  ['left',['left',['../struct_node.html#ad0976834843c7618677d22a10c495b36',1,'Node']]],
+  ['lefttree',['LeftTree',['../minheap__int_8h.html#aae147363d4810a919e5b1ad500eb88e4',1,'minheap_int.c']]]
 ];
