@@ -103,8 +103,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_node.html">Node</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definizione del tipo <a class="el" href="struct_node.html" title="Definizione del tipo Node. ">Node</a>.  <a href="struct_node.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_heap.html">Heap</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -113,9 +112,9 @@ Typedefs</h2></td></tr>
 typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a></td></tr>
 <tr class="memdesc:a3e8b1bd855f5efcb6aa1f67fddcb69ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definizione del tipo ElemType. <br /></td></tr>
 <tr class="separator:a3e8b1bd855f5efcb6aa1f67fddcb69ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b09f37e675bcd48a01bf22155996872"><td class="memItemLeft" align="right" valign="top"><a id="a3b09f37e675bcd48a01bf22155996872"></a>
-typedef struct <a class="el" href="struct_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Node</b></td></tr>
-<tr class="separator:a3b09f37e675bcd48a01bf22155996872"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705af815969c97892c0aaaa658f6c88c"><td class="memItemLeft" align="right" valign="top"><a id="a705af815969c97892c0aaaa658f6c88c"></a>
+typedef struct <a class="el" href="struct_heap.html">Heap</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Heap</b></td></tr>
+<tr class="separator:a705af815969c97892c0aaaa658f6c88c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -128,6 +127,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a07a02ea8bccc1a067b0d457286daa6fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a07a02ea8bccc1a067b0d457286daa6fa">ElemDelete</a> (<a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *e)</td></tr>
 <tr class="memdesc:a07a02ea8bccc1a067b0d457286daa6fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ElemDelete libera la memoria occupata dall'elemento specificato.  <a href="#a07a02ea8bccc1a067b0d457286daa6fa">More...</a><br /></td></tr>
 <tr class="separator:a07a02ea8bccc1a067b0d457286daa6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401aff973efade5d3e80761e8777fccf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a401aff973efade5d3e80761e8777fccf">ElemSwap</a> (<a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *e1, <a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *e2)</td></tr>
+<tr class="memdesc:a401aff973efade5d3e80761e8777fccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ElemSwap scambia i due elementi specificati.  <a href="#a401aff973efade5d3e80761e8777fccf">More...</a><br /></td></tr>
+<tr class="separator:a401aff973efade5d3e80761e8777fccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25e577b149e6048606bd85544fcb6f9e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a25e577b149e6048606bd85544fcb6f9e">ReadElem</a> (FILE *f, <a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *e)</td></tr>
 <tr class="memdesc:a25e577b149e6048606bd85544fcb6f9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ReadElem legge un elemento da file.  <a href="#a25e577b149e6048606bd85544fcb6f9e">More...</a><br /></td></tr>
 <tr class="separator:a25e577b149e6048606bd85544fcb6f9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,176 +142,120 @@ Functions</h2></td></tr>
 <tr class="memitem:afb4f67576fa555e9f81d0abca4fb3c2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#afb4f67576fa555e9f81d0abca4fb3c2c">WriteStdoutElem</a> (const <a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *e)</td></tr>
 <tr class="memdesc:afb4f67576fa555e9f81d0abca4fb3c2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione PrintStdoutElem stampa un elemento su standard output.  <a href="#afb4f67576fa555e9f81d0abca4fb3c2c">More...</a><br /></td></tr>
 <tr class="separator:afb4f67576fa555e9f81d0abca4fb3c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa5c70b513aed5480727cf11b9271b66d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#aa5c70b513aed5480727cf11b9271b66d">CreateEmptyTree</a> (void)</td></tr>
-<tr class="memdesc:aa5c70b513aed5480727cf11b9271b66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione CreateEmptyTree crea e ritorna un albero vuoto, ovvero NULL pointer.  <a href="#aa5c70b513aed5480727cf11b9271b66d">More...</a><br /></td></tr>
-<tr class="separator:aa5c70b513aed5480727cf11b9271b66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6a5a1dacc004f185aeb17d58cddfc55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#aa6a5a1dacc004f185aeb17d58cddfc55">CreateRootTree</a> (const <a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *e, <a class="el" href="struct_node.html">Node</a> *l, <a class="el" href="struct_node.html">Node</a> *r)</td></tr>
-<tr class="memdesc:aa6a5a1dacc004f185aeb17d58cddfc55"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione CreateRootTree crea un nuovo albero avente come radice il valore specificato e come figli sinistro e destro i sottoalberi dati. La funzione ritorna quindi il puntatore al nodo radice dell'albero appena creato.  <a href="#aa6a5a1dacc004f185aeb17d58cddfc55">More...</a><br /></td></tr>
-<tr class="separator:aa6a5a1dacc004f185aeb17d58cddfc55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a735a77cd0dc7ce5f13408a602772c13b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a735a77cd0dc7ce5f13408a602772c13b">IsEmptyTree</a> (const <a class="el" href="struct_node.html">Node</a> *n)</td></tr>
-<tr class="memdesc:a735a77cd0dc7ce5f13408a602772c13b"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione IsEmptyTree verifica se un albero e' vuoto o meno.  <a href="#a735a77cd0dc7ce5f13408a602772c13b">More...</a><br /></td></tr>
-<tr class="separator:a735a77cd0dc7ce5f13408a602772c13b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf5a07246584cab348a7bc578d8a223c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#aaf5a07246584cab348a7bc578d8a223c">GetRootValueTree</a> (const <a class="el" href="struct_node.html">Node</a> *n)</td></tr>
-<tr class="memdesc:aaf5a07246584cab348a7bc578d8a223c"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione GetRootValueTree ritorna un puntatore all'elemento contentuto nel nodo radice dell'albero specificato.  <a href="#aaf5a07246584cab348a7bc578d8a223c">More...</a><br /></td></tr>
-<tr class="separator:aaf5a07246584cab348a7bc578d8a223c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae147363d4810a919e5b1ad500eb88e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#aae147363d4810a919e5b1ad500eb88e4">LeftTree</a> (const <a class="el" href="struct_node.html">Node</a> *n)</td></tr>
-<tr class="memdesc:aae147363d4810a919e5b1ad500eb88e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione LeftTree ritorna un puntatore al nodo figlio (sinistro) dell'albero specificato.  <a href="#aae147363d4810a919e5b1ad500eb88e4">More...</a><br /></td></tr>
-<tr class="separator:aae147363d4810a919e5b1ad500eb88e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1e4366a027ae676d5a569cdb809ad66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#af1e4366a027ae676d5a569cdb809ad66">RightTree</a> (const <a class="el" href="struct_node.html">Node</a> *n)</td></tr>
-<tr class="memdesc:af1e4366a027ae676d5a569cdb809ad66"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione RightTree ritorna un puntatore al nodo figlio (destro) dell'albero specificato.  <a href="#af1e4366a027ae676d5a569cdb809ad66">More...</a><br /></td></tr>
-<tr class="separator:af1e4366a027ae676d5a569cdb809ad66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab065de59ba7fec41abf4a6f98204fc40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#ab065de59ba7fec41abf4a6f98204fc40">IsLeafTree</a> (const <a class="el" href="struct_node.html">Node</a> *n)</td></tr>
-<tr class="memdesc:ab065de59ba7fec41abf4a6f98204fc40"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione IsLeafTree verifica se il nodo specificato e' una foglia oppure no.  <a href="#ab065de59ba7fec41abf4a6f98204fc40">More...</a><br /></td></tr>
-<tr class="separator:ab065de59ba7fec41abf4a6f98204fc40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9771435d88d60b4b48db842055019125"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a9771435d88d60b4b48db842055019125">DeleteTree</a> (<a class="el" href="struct_node.html">Node</a> *n)</td></tr>
-<tr class="memdesc:a9771435d88d60b4b48db842055019125"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione DeleteTree libera la memoria occupata dai nodi di un albero.  <a href="#a9771435d88d60b4b48db842055019125">More...</a><br /></td></tr>
-<tr class="separator:a9771435d88d60b4b48db842055019125"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3655251cb206e51d6420befb36e21b08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a3655251cb206e51d6420befb36e21b08">WritePreOrderTree</a> (const <a class="el" href="struct_node.html">Node</a> *n, FILE *f)</td></tr>
-<tr class="memdesc:a3655251cb206e51d6420befb36e21b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione WritePreOrderTree stampa l'albero specificato su file, visitandolo in pre-ordine.  <a href="#a3655251cb206e51d6420befb36e21b08">More...</a><br /></td></tr>
-<tr class="separator:a3655251cb206e51d6420befb36e21b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7488c3ab947f2bc826c06b15982dde0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#ab7488c3ab947f2bc826c06b15982dde0">WriteStdoutPreOrderTree</a> (const <a class="el" href="struct_node.html">Node</a> *n)</td></tr>
-<tr class="memdesc:ab7488c3ab947f2bc826c06b15982dde0"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione WriteStdoutPreOrderTree stampa l'albero specificato su standard output, visitandolo in pre-ordine.  <a href="#ab7488c3ab947f2bc826c06b15982dde0">More...</a><br /></td></tr>
-<tr class="separator:ab7488c3ab947f2bc826c06b15982dde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42b5cc5e3e751bfbe7694fc868a4bc09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a42b5cc5e3e751bfbe7694fc868a4bc09">WriteInOrderTree</a> (const <a class="el" href="struct_node.html">Node</a> *n, FILE *f)</td></tr>
-<tr class="memdesc:a42b5cc5e3e751bfbe7694fc868a4bc09"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione WriteInOrderTree stampa l'albero specificato su file, visitandolo in ordine.  <a href="#a42b5cc5e3e751bfbe7694fc868a4bc09">More...</a><br /></td></tr>
-<tr class="separator:a42b5cc5e3e751bfbe7694fc868a4bc09"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99faf6420a8a89ba99bf2b9a230e00cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a99faf6420a8a89ba99bf2b9a230e00cd">WriteStdoutInOrderTree</a> (const <a class="el" href="struct_node.html">Node</a> *n)</td></tr>
-<tr class="memdesc:a99faf6420a8a89ba99bf2b9a230e00cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione WriteStdoutInOrderTree stampa l'albero specificato su standard output, visitandolo in ordine.  <a href="#a99faf6420a8a89ba99bf2b9a230e00cd">More...</a><br /></td></tr>
-<tr class="separator:a99faf6420a8a89ba99bf2b9a230e00cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf61af9af85f0f8cf91cd46058fe0740"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#acf61af9af85f0f8cf91cd46058fe0740">WritePostOrderTree</a> (const <a class="el" href="struct_node.html">Node</a> *n, FILE *f)</td></tr>
-<tr class="memdesc:acf61af9af85f0f8cf91cd46058fe0740"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione WritePostOrderTree stampa l'albero specificato su file, visitandolo in post-ordine.  <a href="#acf61af9af85f0f8cf91cd46058fe0740">More...</a><br /></td></tr>
-<tr class="separator:acf61af9af85f0f8cf91cd46058fe0740"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4769e6cc262a8c1bbc1fab9df721b91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#aa4769e6cc262a8c1bbc1fab9df721b91">WriteStdoutPostOrderTree</a> (const <a class="el" href="struct_node.html">Node</a> *n)</td></tr>
-<tr class="memdesc:aa4769e6cc262a8c1bbc1fab9df721b91"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione WriteStdoutPostOrderTree stampa l'albero specificato su standard output, visitandolo in post-ordine.  <a href="#aa4769e6cc262a8c1bbc1fab9df721b91">More...</a><br /></td></tr>
-<tr class="separator:aa4769e6cc262a8c1bbc1fab9df721b91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cacbb462fa51c7ca3d5c2037a6f8f8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a2cacbb462fa51c7ca3d5c2037a6f8f8a">LeftHeap</a> (int i)</td></tr>
+<tr class="memdesc:a2cacbb462fa51c7ca3d5c2037a6f8f8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione LeftHeap prende in input l'indice di un nodo dello heap e ritorna l'indice del suo figlio sinistro.  <a href="#a2cacbb462fa51c7ca3d5c2037a6f8f8a">More...</a><br /></td></tr>
+<tr class="separator:a2cacbb462fa51c7ca3d5c2037a6f8f8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a872e8563134cd01475e8596db108902b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a872e8563134cd01475e8596db108902b">RightHeap</a> (int i)</td></tr>
+<tr class="memdesc:a872e8563134cd01475e8596db108902b"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione RightHeap prende in input l'indice di un nodo dello heap e ritorna l'indice del suo figlio destro.  <a href="#a872e8563134cd01475e8596db108902b">More...</a><br /></td></tr>
+<tr class="separator:a872e8563134cd01475e8596db108902b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ac79336e45bda0d8f046d4e4269449"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#ad6ac79336e45bda0d8f046d4e4269449">ParentHeap</a> (int i)</td></tr>
+<tr class="memdesc:ad6ac79336e45bda0d8f046d4e4269449"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione ParentHeap prende in input l'indice di un nodo dello heap e ritorna l'indice del nodo padre.  <a href="#ad6ac79336e45bda0d8f046d4e4269449">More...</a><br /></td></tr>
+<tr class="separator:ad6ac79336e45bda0d8f046d4e4269449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b7b8ce92d4b1017b11fe7dd4b6266c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_heap.html">Heap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#af0b7b8ce92d4b1017b11fe7dd4b6266c">CreateEmptyHeap</a> ()</td></tr>
+<tr class="memdesc:af0b7b8ce92d4b1017b11fe7dd4b6266c"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione CreateEmptyHeap crea e ritorna un heap vuoto implementato mediante array.  <a href="#af0b7b8ce92d4b1017b11fe7dd4b6266c">More...</a><br /></td></tr>
+<tr class="separator:af0b7b8ce92d4b1017b11fe7dd4b6266c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ddaff76dc2ec64155e3f151f4246d4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a3ddaff76dc2ec64155e3f151f4246d4e">IsEmptyHeap</a> (const <a class="el" href="struct_heap.html">Heap</a> *h)</td></tr>
+<tr class="memdesc:a3ddaff76dc2ec64155e3f151f4246d4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione IsEmptyHeap verifica se un heap e' vuoto o meno. Lo heap deve esistere.  <a href="#a3ddaff76dc2ec64155e3f151f4246d4e">More...</a><br /></td></tr>
+<tr class="separator:a3ddaff76dc2ec64155e3f151f4246d4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0233851c1359e1af6d6b335bfa8bec8"><td class="memItemLeft" align="right" valign="top"><a id="ae0233851c1359e1af6d6b335bfa8bec8"></a>
+<a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>GetNodeValueHeap</b> (const <a class="el" href="struct_heap.html">Heap</a> *h, int i)</td></tr>
+<tr class="separator:ae0233851c1359e1af6d6b335bfa8bec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579391f52e94b5009a510ef176bc25b6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#a579391f52e94b5009a510ef176bc25b6">MoveUpMinHeap</a> (<a class="el" href="struct_heap.html">Heap</a> *h, int i)</td></tr>
+<tr class="memdesc:a579391f52e94b5009a510ef176bc25b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dato un heap e l'indice di un nodo, la funzione MoveUpMinHeap sposta il nodo in alto all'interno dell'albero heap, ovvero lo scambia con il nodo padre ricorsivamente fino a quando le condizione (min-)heap non sono rispettate.  <a href="#a579391f52e94b5009a510ef176bc25b6">More...</a><br /></td></tr>
+<tr class="separator:a579391f52e94b5009a510ef176bc25b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0302de64838645a71a3360d78c42983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#ae0302de64838645a71a3360d78c42983">MoveDownMinHeap</a> (<a class="el" href="struct_heap.html">Heap</a> *h, int i)</td></tr>
+<tr class="memdesc:ae0302de64838645a71a3360d78c42983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dato un heap e l'indice di un nodo, la funzione MoveDownMinHeap sposta il nodo in basso all'interno dell'albero heap, ovvero lo scambia con il minore dei figli ricorsivamente fino a quando le condizione (min-)heap non sono rispettate.  <a href="#ae0302de64838645a71a3360d78c42983">More...</a><br /></td></tr>
+<tr class="separator:ae0302de64838645a71a3360d78c42983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d5570bca5ff0e264886f791ffe21a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#af1d5570bca5ff0e264886f791ffe21a3">DeleteHeap</a> (<a class="el" href="struct_heap.html">Heap</a> *h)</td></tr>
+<tr class="memdesc:af1d5570bca5ff0e264886f791ffe21a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione DeleteHeap libera la memoria occupata dai nodi di uno heap.  <a href="#af1d5570bca5ff0e264886f791ffe21a3">More...</a><br /></td></tr>
+<tr class="separator:af1d5570bca5ff0e264886f791ffe21a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1411bd60b8cb85466b8b8c142b98d0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#aa1411bd60b8cb85466b8b8c142b98d0c">WriteHeap</a> (const <a class="el" href="struct_heap.html">Heap</a> *h, FILE *f)</td></tr>
+<tr class="memdesc:aa1411bd60b8cb85466b8b8c142b98d0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione WriteHeap stampa lo heap specificato su file.  <a href="#aa1411bd60b8cb85466b8b8c142b98d0c">More...</a><br /></td></tr>
+<tr class="separator:aa1411bd60b8cb85466b8b8c142b98d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa50fd7204092b3c03647935d2e6b67f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="minheap__int_8h.html#aaa50fd7204092b3c03647935d2e6b67f">WriteStdoutHeap</a> (const <a class="el" href="struct_heap.html">Heap</a> *i)</td></tr>
+<tr class="memdesc:aaa50fd7204092b3c03647935d2e6b67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">La funzione WriteStdoutHeap stampa lo heap specificato su standard output.  <a href="#aaa50fd7204092b3c03647935d2e6b67f">More...</a><br /></td></tr>
+<tr class="separator:aaa50fd7204092b3c03647935d2e6b67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Definizione del tipo ElemType e dichiarazione delle funzioni ad esso associate:</p><ul>
 <li><a class="el" href="minheap__int_8h.html#a7268d566f05ce324f6bceea069d9793a" title="La funzione ElemCompare confronta due elementi. ">ElemCompare()</a></li>
 <li><a class="el" href="minheap__int_8h.html#ae7bedbb439aa379a44372e19f76e66ad" title="La funzione ElemCopy crea e ritorna una copia dell&#39;elemento dato. ">ElemCopy()</a></li>
 <li><a class="el" href="minheap__int_8h.html#a07a02ea8bccc1a067b0d457286daa6fa" title="La funzione ElemDelete libera la memoria occupata dall&#39;elemento specificato. ">ElemDelete()</a></li>
+<li><a class="el" href="minheap__int_8h.html#a401aff973efade5d3e80761e8777fccf" title="La funzione ElemSwap scambia i due elementi specificati. ">ElemSwap()</a></li>
 <li><a class="el" href="minheap__int_8h.html#a25e577b149e6048606bd85544fcb6f9e" title="La funzione ReadElem legge un elemento da file. ">ReadElem()</a></li>
 <li><a class="el" href="minheap__int_8h.html#a93678d55a9f410e29b38c7bde786a718" title="La funzione ReadStdinElem legge un elemento da standard input. ">ReadStdinElem()</a></li>
 <li><a class="el" href="minheap__int_8h.html#a61568db0888c2a7b1a471cf029510702" title="La funzione WriteElem stampa un elemento su file. ">WriteElem()</a></li>
 <li><a class="el" href="minheap__int_8h.html#afb4f67576fa555e9f81d0abca4fb3c2c" title="La funzione PrintStdoutElem stampa un elemento su standard output. ">WriteStdoutElem()</a></li>
 </ul>
 <p>Le suddette funzioni dipendono da come ElemType viene definito: al variare della definizione di ElemType la dichiarazione delle funzioni non cambia, ma la loro definizione deve essere modificata opportunamente.</p>
-<p>Definizione del tipo <a class="el" href="struct_node.html" title="Definizione del tipo Node. ">Node</a> e delle funzioni primitive (e non) degli alberi:</p><ul>
-<li><a class="el" href="minheap__int_8h.html#aa5c70b513aed5480727cf11b9271b66d" title="La funzione CreateEmptyTree crea e ritorna un albero vuoto, ovvero NULL pointer. ">CreateEmptyTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#aa6a5a1dacc004f185aeb17d58cddfc55" title="La funzione CreateRootTree crea un nuovo albero avente come radice il valore specificato e come figli...">CreateRootTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#a735a77cd0dc7ce5f13408a602772c13b" title="La funzione IsEmptyTree verifica se un albero e&#39; vuoto o meno. ">IsEmptyTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#aaf5a07246584cab348a7bc578d8a223c" title="La funzione GetRootValueTree ritorna un puntatore all&#39;elemento contentuto nel nodo radice dell&#39;albero...">GetRootValueTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#aae147363d4810a919e5b1ad500eb88e4" title="La funzione LeftTree ritorna un puntatore al nodo figlio (sinistro) dell&#39;albero specificato. ">LeftTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#af1e4366a027ae676d5a569cdb809ad66" title="La funzione RightTree ritorna un puntatore al nodo figlio (destro) dell&#39;albero specificato. ">RightTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#ab065de59ba7fec41abf4a6f98204fc40" title="La funzione IsLeafTree verifica se il nodo specificato e&#39; una foglia oppure no. ">IsLeafTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#a9771435d88d60b4b48db842055019125" title="La funzione DeleteTree libera la memoria occupata dai nodi di un albero. ">DeleteTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#a3655251cb206e51d6420befb36e21b08" title="La funzione WritePreOrderTree stampa l&#39;albero specificato su file, visitandolo in pre-ordine...">WritePreOrderTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#ab7488c3ab947f2bc826c06b15982dde0" title="La funzione WriteStdoutPreOrderTree stampa l&#39;albero specificato su standard output, visitandolo in pre-ordine. ">WriteStdoutPreOrderTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#a42b5cc5e3e751bfbe7694fc868a4bc09" title="La funzione WriteInOrderTree stampa l&#39;albero specificato su file, visitandolo in ordine. ">WriteInOrderTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#a99faf6420a8a89ba99bf2b9a230e00cd" title="La funzione WriteStdoutInOrderTree stampa l&#39;albero specificato su standard output, visitandolo in ordine. ">WriteStdoutInOrderTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#acf61af9af85f0f8cf91cd46058fe0740" title="La funzione WritePostOrderTree stampa l&#39;albero specificato su file, visitandolo in post-ordine...">WritePostOrderTree()</a></li>
-<li><a class="el" href="minheap__int_8h.html#aa4769e6cc262a8c1bbc1fab9df721b91" title="La funzione WriteStdoutPostOrderTree stampa l&#39;albero specificato su standard output, visitandolo in post-ordine. ">WriteStdoutPostOrderTree()</a></li>
+<p>Definizione del tipo Node e delle funzioni primitive (e non) degli alberi:</p><ul>
+<li>CreateEmptyTree()</li>
+<li>CreateRootTree()</li>
+<li>IsEmptyTree()</li>
+<li>GetRootValueTree()</li>
+<li>LeftTree()</li>
+<li>RightTree()</li>
+<li>IsLeafTree()</li>
+<li>DeleteTree()</li>
+<li>WritePreOrderTree()</li>
+<li>WriteStdoutPreOrderTree()</li>
+<li>WriteInOrderTree()</li>
+<li>WriteStdoutInOrderTree()</li>
+<li>WritePostOrderTree()</li>
+<li>WriteStdoutPostOrderTree()</li>
 </ul>
 <p>La dichiarazioni e la definizione delle suddette funzioni NON deve essere modificate al variare della definizione di ElemType. </p>
 
 <p class="definition">Definition in file <a class="el" href="minheap__int_8h_source.html">minheap_int.h</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="aa5c70b513aed5480727cf11b9271b66d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa5c70b513aed5480727cf11b9271b66d">&#9670;&nbsp;</a></span>CreateEmptyTree()</h2>
+<a id="af0b7b8ce92d4b1017b11fe7dd4b6266c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b7b8ce92d4b1017b11fe7dd4b6266c">&#9670;&nbsp;</a></span>CreateEmptyHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_node.html">Node</a>* CreateEmptyTree </td>
+          <td class="memname"><a class="el" href="struct_heap.html">Heap</a>* CreateEmptyHeap </td>
           <td>(</td>
-          <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione CreateEmptyTree crea e ritorna un albero vuoto, ovvero NULL pointer. </p>
-<dl class="section return"><dt>Returns</dt><dd>Albero vuoto appena creato (NULL pointer). </dd></dl>
+<p>La funzione CreateEmptyHeap crea e ritorna un heap vuoto implementato mediante array. </p>
+<dl class="section return"><dt>Returns</dt><dd>Puntatore allo heap appena creato. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00056">56</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00083">83</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
-<a id="aa6a5a1dacc004f185aeb17d58cddfc55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6a5a1dacc004f185aeb17d58cddfc55">&#9670;&nbsp;</a></span>CreateRootTree()</h2>
+<a id="af1d5570bca5ff0e264886f791ffe21a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1d5570bca5ff0e264886f791ffe21a3">&#9670;&nbsp;</a></span>DeleteHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_node.html">Node</a>* CreateRootTree </td>
+          <td class="memname">void DeleteHeap </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *&#160;</td>
-          <td class="paramname"><em>e</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>l</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>r</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>La funzione CreateRootTree crea un nuovo albero avente come radice il valore specificato e come figli sinistro e destro i sottoalberi dati. La funzione ritorna quindi il puntatore al nodo radice dell'albero appena creato. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">e</td><td>Puntatore all'elemento il cui valore sara' copiato nel nodo radice del nuovo albero. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>Puntatore al nodo che diventera' il figlio sinistro del nuovo albero. Il valore contenuto in l non viene modificato. l puo' puntare ad un albero vuoto (NULL pointer). </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">r</td><td>Puntatore al nodo che diventera' il figlio destro del nuovo albero. Il valore contenuto in r non viene modificato. r puo' puntare ad un albero vuoto (NULL pointer).</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Puntatore al nodo radice dell'albero appena creato. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00061">61</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
-
-</div>
-</div>
-<a id="a9771435d88d60b4b48db842055019125"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9771435d88d60b4b48db842055019125">&#9670;&nbsp;</a></span>DeleteTree()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void DeleteTree </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_heap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione DeleteTree libera la memoria occupata dai nodi di un albero. </p>
+<p>La funzione DeleteHeap libera la memoria occupata dai nodi di uno heap. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero di cui liberare la memoria. Puo' essere un albero vuoto (NULL pointer).</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Puntatore al primo elemento dell'array che memorizza lo heap.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00111">111</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00136">136</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
@@ -416,119 +362,206 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaf5a07246584cab348a7bc578d8a223c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf5a07246584cab348a7bc578d8a223c">&#9670;&nbsp;</a></span>GetRootValueTree()</h2>
+<a id="a401aff973efade5d3e80761e8777fccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401aff973efade5d3e80761e8777fccf">&#9670;&nbsp;</a></span>ElemSwap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a>* GetRootValueTree </td>
+          <td class="memname">void ElemSwap </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *&#160;</td>
+          <td class="paramname"><em>e1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="minheap__int_8h.html#a3e8b1bd855f5efcb6aa1f67fddcb69ad">ElemType</a> *&#160;</td>
+          <td class="paramname"><em>e2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione GetRootValueTree ritorna un puntatore all'elemento contentuto nel nodo radice dell'albero specificato. </p>
+<p>La funzione ElemSwap scambia i due elementi specificati. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero. L'albero non puo' essere vuoto, nel caso in cui lo sia la funzione termina il programma con codice di errore 1.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e1</td><td>Puntatore al primo elemento da scambiare. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">e2</td><td>Puntatore al secondo elemento da scambiare.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Puntatore costante all'elemento contenuto nel nodo radice dell'albero. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00075">75</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00032">32</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
-<a id="a735a77cd0dc7ce5f13408a602772c13b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a735a77cd0dc7ce5f13408a602772c13b">&#9670;&nbsp;</a></span>IsEmptyTree()</h2>
+<a id="a3ddaff76dc2ec64155e3f151f4246d4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ddaff76dc2ec64155e3f151f4246d4e">&#9670;&nbsp;</a></span>IsEmptyHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsEmptyTree </td>
+          <td class="memname">bool IsEmptyHeap </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_heap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione IsEmptyTree verifica se un albero e' vuoto o meno. </p>
+<p>La funzione IsEmptyHeap verifica se un heap e' vuoto o meno. Lo heap deve esistere. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero da verificare.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td>Puntatore allo heap da testare.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true se l'albero e' vuoto, false altrimenti. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>true se lo heap e' vuoto, ovvero contiene zero elementi, false altrimenti. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00070">70</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00078">78</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
-<a id="ab065de59ba7fec41abf4a6f98204fc40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab065de59ba7fec41abf4a6f98204fc40">&#9670;&nbsp;</a></span>IsLeafTree()</h2>
+<a id="a2cacbb462fa51c7ca3d5c2037a6f8f8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cacbb462fa51c7ca3d5c2037a6f8f8a">&#9670;&nbsp;</a></span>LeftHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool IsLeafTree </td>
+          <td class="memname">int LeftHeap </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione IsLeafTree verifica se il nodo specificato e' una foglia oppure no. </p>
+<p>La funzione LeftHeap prende in input l'indice di un nodo dello heap e ritorna l'indice del suo figlio sinistro. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo da verificare. Puo' essere un nodo vuoto (NULL pointer). Il nodo n non viene modificato.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Indice di un nodo nello heap.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>true se il nodo e' una foglia, ovvero se e' un nodo vuoto (NULL pointer) o se entrambi i suoi figli (sinistro e destro) sono nodi vuoti (NULL pointer). </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Indice del figlio sinistro del nodo i. Non è detto che il nodo avente l'indice ritornato sia effettivamente presente nello heap. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00106">106</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00063">63</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
-<a id="aae147363d4810a919e5b1ad500eb88e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aae147363d4810a919e5b1ad500eb88e4">&#9670;&nbsp;</a></span>LeftTree()</h2>
+<a id="ae0302de64838645a71a3360d78c42983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0302de64838645a71a3360d78c42983">&#9670;&nbsp;</a></span>MoveDownMinHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_node.html">Node</a>* LeftTree </td>
+          <td class="memname">void MoveDownMinHeap </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="struct_heap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dato un heap e l'indice di un nodo, la funzione MoveDownMinHeap sposta il nodo in basso all'interno dell'albero heap, ovvero lo scambia con il minore dei figli ricorsivamente fino a quando le condizione (min-)heap non sono rispettate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00110">110</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+
+</div>
+</div>
+<a id="a579391f52e94b5009a510ef176bc25b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579391f52e94b5009a510ef176bc25b6">&#9670;&nbsp;</a></span>MoveUpMinHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MoveUpMinHeap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_heap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dato un heap e l'indice di un nodo, la funzione MoveUpMinHeap sposta il nodo in alto all'interno dell'albero heap, ovvero lo scambia con il nodo padre ricorsivamente fino a quando le condizione (min-)heap non sono rispettate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00102">102</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+
+</div>
+</div>
+<a id="ad6ac79336e45bda0d8f046d4e4269449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ac79336e45bda0d8f046d4e4269449">&#9670;&nbsp;</a></span>ParentHeap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParentHeap </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione LeftTree ritorna un puntatore al nodo figlio (sinistro) dell'albero specificato. </p>
+<p>La funzione ParentHeap prende in input l'indice di un nodo dello heap e ritorna l'indice del nodo padre. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero da cui ottenere il figlio sinistro. Puo' essere un nodo vuoto (NULL pointer). Il nodo n non viene modificato.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Indice di un nodo nello heap.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Puntatore al nodo figlio (sinistro) dell'albero specificato. Se l'albero specificato e' vuoto o non ha un figlio sinistro la funzione ritorna NULL; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Indice del padre del nodo i. Non è detto che il nodo avente l'indice ritornato sia effettivamente presente nello heap. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00086">86</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00073">73</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
@@ -568,7 +601,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Numero di elementi effettivamente letti (0 o 1). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00032">32</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00039">39</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
@@ -597,36 +630,36 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Numero di elementi effettivamente letti (0 o 1). </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00037">37</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00044">44</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
-<a id="af1e4366a027ae676d5a569cdb809ad66"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1e4366a027ae676d5a569cdb809ad66">&#9670;&nbsp;</a></span>RightTree()</h2>
+<a id="a872e8563134cd01475e8596db108902b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a872e8563134cd01475e8596db108902b">&#9670;&nbsp;</a></span>RightHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_node.html">Node</a>* RightTree </td>
+          <td class="memname">int RightHeap </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione RightTree ritorna un puntatore al nodo figlio (destro) dell'albero specificato. </p>
+<p>La funzione RightHeap prende in input l'indice di un nodo dello heap e ritorna l'indice del suo figlio destro. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero da cui ottenere il figlio destro. Puo' essere un nodo vuoto (NULL pointer). Il nodo n non viene modificato.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">i</td><td>Indice di un nodo nello heap.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Puntatore al nodo figlio (destro) dell'albero specificato. Se l'albero specificato e' vuoto o non ha un figlio destro la funzione ritorna NULL; </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Indice del figlio destro del nodo i. Non è detto che il nodo avente l'indice ritornato sia effettivamente presente nello heap. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00096">96</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00068">68</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
@@ -666,21 +699,21 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00042">42</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00049">49</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
-<a id="a42b5cc5e3e751bfbe7694fc868a4bc09"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42b5cc5e3e751bfbe7694fc868a4bc09">&#9670;&nbsp;</a></span>WriteInOrderTree()</h2>
+<a id="aa1411bd60b8cb85466b8b8c142b98d0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1411bd60b8cb85466b8b8c142b98d0c">&#9670;&nbsp;</a></span>WriteHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void WriteInOrderTree </td>
+          <td class="memname">void WriteHeap </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
+          <td class="paramtype">const <a class="el" href="struct_heap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -696,97 +729,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione WriteInOrderTree stampa l'albero specificato su file, visitandolo in ordine. </p>
+<p>La funzione WriteHeap stampa lo heap specificato su file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero da stampare su file. L'albero non viene modificato. L'albero puo' essere vuoto. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>FILE * su cui stampare l'albero.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td><a class="el" href="struct_heap.html">Heap</a> da stampare su file. Lo heap non viene modificato. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>FILE * su cui stampare lo heap.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00174">174</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
-
-</div>
-</div>
-<a id="acf61af9af85f0f8cf91cd46058fe0740"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf61af9af85f0f8cf91cd46058fe0740">&#9670;&nbsp;</a></span>WritePostOrderTree()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WritePostOrderTree </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>La funzione WritePostOrderTree stampa l'albero specificato su file, visitandolo in post-ordine. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero da stampare su file. L'albero non viene modificato. L'albero puo' essere vuoto. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>FILE * su cui stampare l'albero.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00203">203</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
-
-</div>
-</div>
-<a id="a3655251cb206e51d6420befb36e21b08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3655251cb206e51d6420befb36e21b08">&#9670;&nbsp;</a></span>WritePreOrderTree()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WritePreOrderTree </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FILE *&#160;</td>
-          <td class="paramname"><em>f</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>La funzione WritePreOrderTree stampa l'albero specificato su file, visitandolo in pre-ordine. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero da stampare su file. L'albero non viene modificato. L'albero puo' essere vuoto. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">f</td><td>FILE * su cui stampare l'albero.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00143">143</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00148">148</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
@@ -815,94 +768,36 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00047">47</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00054">54</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
-<a id="a99faf6420a8a89ba99bf2b9a230e00cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99faf6420a8a89ba99bf2b9a230e00cd">&#9670;&nbsp;</a></span>WriteStdoutInOrderTree()</h2>
+<a id="aaa50fd7204092b3c03647935d2e6b67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa50fd7204092b3c03647935d2e6b67f">&#9670;&nbsp;</a></span>WriteStdoutHeap()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void WriteStdoutInOrderTree </td>
+          <td class="memname">void WriteStdoutHeap </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="struct_heap.html">Heap</a> *&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>La funzione WriteStdoutInOrderTree stampa l'albero specificato su standard output, visitandolo in ordine. </p>
+<p>La funzione WriteStdoutHeap stampa lo heap specificato su standard output. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero da stampare su standard output. L'albero non viene modificato. L'albero puo' essere vuoto.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">h</td><td><a class="el" href="struct_heap.html">Heap</a> da stampare su standard output. Lo heap non viene modificato.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00186">186</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
-
-</div>
-</div>
-<a id="aa4769e6cc262a8c1bbc1fab9df721b91"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4769e6cc262a8c1bbc1fab9df721b91">&#9670;&nbsp;</a></span>WriteStdoutPostOrderTree()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WriteStdoutPostOrderTree </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>La funzione WriteStdoutPostOrderTree stampa l'albero specificato su standard output, visitandolo in post-ordine. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero da stampare su standard output. L'albero non viene modificato. L'albero puo' essere vuoto.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00215">215</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
-
-</div>
-</div>
-<a id="ab7488c3ab947f2bc826c06b15982dde0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7488c3ab947f2bc826c06b15982dde0">&#9670;&nbsp;</a></span>WriteStdoutPreOrderTree()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void WriteStdoutPreOrderTree </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_node.html">Node</a> *&#160;</td>
-          <td class="paramname"><em>n</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>La funzione WriteStdoutPreOrderTree stampa l'albero specificato su standard output, visitandolo in pre-ordine. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">n</td><td>Puntatore al nodo radice dell'albero da stampare su standard output. L'albero non viene modificato. L'albero puo' essere vuoto.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Non ci sono valori di ritorno. </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00155">155</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="minheap__int_8c_source.html#l00160">160</a> of file <a class="el" href="minheap__int_8c_source.html">minheap_int.c</a>.</p>
 
 </div>
 </div>
