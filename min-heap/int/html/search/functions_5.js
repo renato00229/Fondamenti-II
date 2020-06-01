@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['movedownminheap',['MoveDownMinHeap',['../minheap__int_8h.html#ae0302de64838645a71a3360d78c42983',1,'minheap_int.c']]],
-  ['moveupminheap',['MoveUpMinHeap',['../minheap__int_8h.html#a579391f52e94b5009a510ef176bc25b6',1,'minheap_int.c']]]
+  ['leftheap',['LeftHeap',['../minheap__int_8h.html#a2cacbb462fa51c7ca3d5c2037a6f8f8a',1,'minheap_int.c']]]
 ];

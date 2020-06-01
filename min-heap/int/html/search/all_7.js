@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['parentheap',['ParentHeap',['../minheap__int_8h.html#ad6ac79336e45bda0d8f046d4e4269449',1,'minheap_int.c']]]
+  ['minheap_5fint_2eh',['minheap_int.h',['../minheap__int_8h.html',1,'']]],
+  ['movedownminheap',['MoveDownMinHeap',['../minheap__int_8h.html#ae0302de64838645a71a3360d78c42983',1,'minheap_int.c']]],
+  ['moveupminheap',['MoveUpMinHeap',['../minheap__int_8h.html#a579391f52e94b5009a510ef176bc25b6',1,'minheap_int.c']]]
 ];
